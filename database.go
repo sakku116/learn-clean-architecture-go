@@ -24,5 +24,5 @@ var (
 
 // declare collection
 var (
-// default_coll = &CollectionRepository{default_db.Collection("learn-clean-arc")}
+// default_coll = &CollectionRepository{default_db.Collection("store")}
 )
