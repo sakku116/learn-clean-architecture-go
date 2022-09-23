@@ -1,4 +1,4 @@
-package controller
+package service
 
 type Product struct {
 }
