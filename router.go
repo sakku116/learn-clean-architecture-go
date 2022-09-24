@@ -2,6 +2,7 @@ package main
 
 import (
 	"learn-clean-arc/handler"
+	"learn-clean-arc/service"
 
 	"github.com/gin-gonic/gin"
 )
@@ -15,7 +16,9 @@ func SetRouter(router *gin.Engine) *gin.Engine {
 
 	product_api := router.Group("api/")
 	{
-		var product_handler handler.Product
+		product_handler := handler.Product{
+			Service: service.Product{},
+		}
 		product_api.GET("products/", product_handler.GetAll)
 		product_api.GET("products/:id", product_handler.GetByID)
 		product_api.POST("products/", product_handler.Create)
