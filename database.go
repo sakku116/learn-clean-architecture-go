@@ -19,10 +19,12 @@ func InitDB(db_uri string, db_name string) *mongo.Database {
 
 // intialize databases
 var (
-// default_db = InitDB("mongodb://localhost:27017", "learn-clean-arc")
+	default_db = InitDB("mongodb://localhost:27017", "learn-clean-arc")
 )
 
-// declare collection
+// declare collection respository
 var (
-// default_coll = &CollectionRepository{default_db.Collection("store")}
+	default_coll = CollectionRepository{
+		default_db.Collection("store"),
+	}
 )

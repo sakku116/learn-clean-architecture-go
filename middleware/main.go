@@ -16,6 +16,8 @@ func setMiddleware(router *gin.Engine, middleware gin.HandlerFunc) *gin.Engine {
 	return router
 }
 
+// ---------------------------------
+
 func RequestLogger(c *gin.Context) {
 	fmt.Println("logger running")
 }
